@@ -11,29 +11,60 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const closeBtn = document.querySelector('.close');
 
-// Create the Slideshow Featured Photo
+// Preload images for smoother slideshow transitions
+photos.forEach(src => {
+    const img = new Image();
+    img.src = `images/${src}`;
+});
+
+// Create stacked slideshow container
 const featuredDiv = document.createElement('div');
 featuredDiv.className = 'photo-item featured-photo';
-const featuredImg = document.createElement('img');
-featuredImg.onclick = () => {
-    lightbox.style.display = "block";
-    lightboxImg.src = featuredImg.src; 
-};
-featuredImg.src = `images/${photos[0]}`;
-featuredDiv.appendChild(featuredImg);
+
+// Create two layers for the crossfade
+const imgLayerA = document.createElement('img');
+const imgLayerB = document.createElement('img');
+
+// Initial state
+imgLayerA.src = `images/${photos[0]}`;
+imgLayerA.style.opacity = 1;
+imgLayerA.style.zIndex = 2;
+
+imgLayerB.style.opacity = 0;
+imgLayerB.style.zIndex = 1;
+
+featuredDiv.appendChild(imgLayerA);
+featuredDiv.appendChild(imgLayerB);
 gallery.parentNode.insertBefore(featuredDiv, gallery);
 
-// Slideshow Timer
+// Tracking variables
 let currentIndex = 0;
+let activeLayer = imgLayerA;
+let hiddenLayer = imgLayerB;
+
+// Crossfade Slideshow Logic
 setInterval(() => {
     currentIndex = (currentIndex + 1) % photos.length;
-    featuredImg.style.opacity = 0; 
-    
-    setTimeout(() => {
-        featuredImg.src = `images/${photos[currentIndex]}`;
-        featuredImg.style.opacity = 1;
-    }, 500); 
-}, 3000); 
+    const nextSrc = `images/${photos[currentIndex]}`;
+
+    hiddenLayer.src = nextSrc;
+
+    hiddenLayer.onload = () => {
+        hiddenLayer.style.opacity = 1;
+        activeLayer.style.opacity = 0;
+
+        hiddenLayer.style.zIndex = 2;
+        activeLayer.style.zIndex = 1;
+
+        [activeLayer, hiddenLayer] = [hiddenLayer, activeLayer];
+    };
+}, 4000); 
+
+// Lightbox for the slideshow
+featuredDiv.onclick = () => {
+    lightbox.style.display = "block";
+    lightboxImg.src = activeLayer.src; 
+};
 
 // Render the rest of the photos in the gallery
 photos.forEach(fileName => {
