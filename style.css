@@ -48,8 +48,8 @@ body {
     width: 90%;          
     max-width: 1000px; 
     height: 70vh;        
-    /* -160px pulls it up over the name, auto centers it horizontally */
-    margin: -160px auto 40px auto;  
+    /* -140px pulls it up over the name, auto centers it horizontally */
+    margin: -140px auto 40px auto;  
     background: #000;
     border: 10px solid #000; 
     position: relative; 
@@ -187,19 +187,4 @@ body {
 
 html {
     scroll-behavior: smooth;
-}
-
-.main-title {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: var(--bg-color);
-}
-
-.main-title h1 {
-    font-family: 'Luckiest Guy', cursive; 
-    font-size: clamp(5rem, 15vw, 10rem); 
-    margin: 0;
-    color: var(--text-color);
-    letter-spacing: 10px; 
-    text-transform: uppercase;
 }
