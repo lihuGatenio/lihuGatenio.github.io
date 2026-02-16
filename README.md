@@ -9,3 +9,4 @@ Features:
 - Created full-width contact footer section
 - Set up responsive image gallery grid
 - Added scatterd looking gallery
+- Added shadow and reactive photo hover for gallery photos
