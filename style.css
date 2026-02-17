@@ -166,13 +166,54 @@ body {
     font-size: 50px;
     cursor: pointer;
 }
-
+/* --- contact-box --- */
 .contact-box {
     width: 100%; 
-    background-color: var(--accent-color);
+    background-color: var(--bg-color); 
     border-top: 1px solid #333; 
-    padding: 60px 0; 
+    padding: 0; 
+    overflow: hidden;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: flex-end; 
+    width: 100%;
+    margin: 0;
+}
+
+.contact-text {
+    flex: 0 0 30%; 
+    padding: 20px;
     text-align: center;
+    z-index: 2;
+}
+
+.contact-image {
+    flex: 0 0 70%; 
+    position: relative;
+    align-self: stretch; 
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    display: block;
+}
+
+/* The Fade to Black Effect */
+.contact-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; 
+    height: 100%;
+    background: linear-gradient(to right, var(--bg-color) 0%, transparent 100%);
+    z-index: 1;
 }
 
 .email-link {
