@@ -599,4 +599,38 @@ html {
 
     .photo-item.push-up   { margin-top: -2vh; }
     .photo-item.push-down { margin-top: 2vh; }
+
+    .contact-content {
+        height: 35vh; 
+    }
+
+    .contact-text {
+        flex: 0 0 30%; 
+        padding: 1vw;
+    }
+
+    .contact-image {
+        flex: 0 0 70% !important; 
+    }
+
+    .contact-image img {
+        object-position: 65% center !important; 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .contact-image::before {
+        width: 40%; 
+        background: linear-gradient(to right, #efeee9 10%, transparent 100%);
+    }
+
+    .contact-text h2 {
+        font-size: 1.1rem;
+    }
+
+    .email-link {
+        padding: 8px 12px;
+        font-size: 0.65rem;
+    }
 }
