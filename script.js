@@ -55,12 +55,12 @@ const layoutClasses = [
     ['medium', 'left', 'push-up'], // 1
     ['small', 'right', 'push-down'], // 2
     ['tall', 'center'],    // 3
-    ['medium', 'right'],   // 4
+    ['medium', 'right', 'mobile-left-force'],   // 4
     ['medium', 'left', 'push-down'], // 5
     ['medium', 'right', 'push-up'],    // 6
     ['diptych-member'], // 7
     ['diptych-member'], // 8 
-    ['medium', 'right', 'push-up'], // 9
+    ['medium', 'right', 'push-up', 'mobile-big-force'], // 9
     ['small', 'left', 'push-down'],   // 10
     ['medium', 'right', 'push-up'],   // 11
     ['small', 'left', 'push-down'],  // 12
