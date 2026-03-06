@@ -65,21 +65,21 @@ const layoutClasses = [
     ['medium', 'right', 'push-up'],   // 11
     ['small', 'left', 'push-down'],  // 12
     ['medium', 'right', 'push-up'],  // 13 
-    ['wide', 'left', 'push-down'],  // 14
+    ['semi-wide', 'left', 'push-down'],  // 14
     ['wide', 'center', 'stacked-pair'], // 15
     ['wide', 'center', 'stacked-pair'],  // 16
-    ['small', 'right', 'push-down'],  // 17
-    ['medium', 'right', 'push-up'],  // 18
+    ['small', 'left', 'push-down'],  // 17
+    ['medium', 'center', 'push-up'],  // 18
     ['medium', 'right', 'push-down'],  // 19 
     ['medium', 'left', 'push-up'],  // 20
     ['medium', 'right', 'push-down'], // 21
-    ['medium', 'left', 'push-up'],  // 22
+    ['special-medium', 'left', 'push-up'],  // 22
     ['medium', 'right', 'push-down'], // 23
     ['medium', 'left', 'push-up'], // 24
     ['semi-medium'],  // 25
     ['big', 'right'], // 26
     ['big', 'left'], // 27
-    ['big', 'center'] // 28
+    ['huge', 'center'] // 28
 ];
 
 // This loop generates the items and injects them into the empty #gallery
