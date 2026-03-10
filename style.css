@@ -541,7 +541,7 @@ html {
 @media (max-width: 768px) {
      .rotate-hint {
         position: fixed;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%); 
         
@@ -556,13 +556,13 @@ html {
     }
 
     .phone-icon {
-        width: 50px; 
-        height: 90px;
+        width: 70px; 
+        height: 110px;
         border: 3px solid var(--text-color);
         border-radius: 8px;
         position: relative;
         
-        animation: rotateDevice 3s ease-in-out forwards; 
+        animation: rotateDevice 5s ease-in-out forwards; 
     }
 
     @keyframes fadeOutHint {
@@ -577,7 +577,7 @@ html {
     }
 
     .rotate-hint p {
-        font-size: 0.8rem; 
+        font-size: 1rem; 
         margin-top: 20px;
         color: var(--text-color);
         text-transform: uppercase;
@@ -871,6 +871,7 @@ html {
         height: 100vh !important;
         background-size: contain !important;
         background-position: center !important;
+        background-color: var(--bg-color) !important;
     }
 
     .main-title {
