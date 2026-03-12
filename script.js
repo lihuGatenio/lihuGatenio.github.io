@@ -57,7 +57,7 @@ const layoutClasses = [
     ['tall', 'center'],    // 3
     ['medium', 'right', 'mobile-left-force'],   // 4
     ['medium', 'left', 'push-down'], // 5
-    ['medium', 'right', 'push-up'],    // 6
+    ['medium', 'right', 'push-up', 'mobile-margin-top'],    // 6
     ['diptych-member'], // 7
     ['diptych-member'], // 8 
     ['medium', 'right', 'push-up', 'mobile-big-force'], // 9
@@ -77,8 +77,8 @@ const layoutClasses = [
     ['medium', 'right', 'push-down'], // 23
     ['medium', 'left', 'push-up'], // 24
     ['semi-medium'],  // 25
-    ['big', 'right'], // 26
-    ['big', 'left'], // 27
+    ['big', 'right', 'right-landscape'], // 26
+    ['big', 'left', 'left-landscape'], // 27
     ['huge', 'center'] // 28
 ];
 
@@ -178,4 +178,23 @@ lightbox.onclick = (e) => {
 
 function closeContactCard() {
     document.getElementById('floatingCard').style.display = 'none';
+}
+
+const topNav = document.querySelector('.top-nav');
+const heroSection = document.querySelector('.hero');
+
+const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            topNav.classList.add('visible');
+        } else {
+            topNav.classList.remove('visible');
+        }
+    });
+}, {
+    threshold: 0.1 
+});
+
+if (heroSection && topNav) {
+    navObserver.observe(heroSection);
 }
