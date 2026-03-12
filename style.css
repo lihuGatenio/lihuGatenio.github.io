@@ -552,7 +552,7 @@ html {
         pointer-events: none; 
         
         animation: fadeOutHint 0.5s forwards;
-        animation-delay: 3s; 
+        animation-delay: 5s; 
     }
 
     .phone-icon {
@@ -655,30 +655,32 @@ html {
         display: block; 
     }
 
-    .photo-item.huge img   { width: 100% !important; }
+    .photo-item.huge img   { width: 100%; }
     .photo-item.big img    { 
-        width: 95% !important; 
+        width: 95%; 
     }
     .photo-item.wide img   {
-        width: 85% !important;
+        width: 85%;
         margin-bottom: 10%;
     }
     .photo-item.semi-wide img   {
-        width: 80% !important;
+        width: 80%;
         margin-bottom: 10%;
     }
-    .photo-item.medium img { width: 75% !important; }
+    .photo-item.medium img { 
+        width: 75%;
+    }
     .photo-item.semi-medium img { 
-        width: 75% !important; 
+        width: 75%; 
         padding: 0 0 0 25% !important;
         margin-bottom: 10%;
     }
-    .photo-item.special-medium img { width: 85% !important; }
+    .photo-item.special-medium img { width: 85%; }
     .photo-item.small img  { 
-        width: 60% !important; 
+        width: 60%; 
         
     }
-    .photo-item.tall img   { width: 50% !important; }
+    .photo-item.tall img   { width: 50%; }
 
     .photo-item.left img   { margin-right: auto; margin-left: 0; }
     .photo-item.right img  { margin-left: auto; margin-right: 0; }
@@ -859,6 +861,7 @@ html {
         margin-left: 0 !important;
         margin-right: auto !important;
     }
+    
     .photo-item.mobile-big-force img   {
         width: 85%;
         margin-bottom: 5%;
@@ -896,6 +899,107 @@ html {
     .email-link {
         border: none !important;
         padding: 0 !important;
+    }
+
+    .photo-item {
+        flex: 0 0 50% !important;
+        padding: 0 5px !important;
+        margin-bottom: 8vh !important;
+        box-sizing: border-box;
+    }
+
+    .photo-item img {
+        max-height: 92vh !important; 
+        width: 92% !important;
+        height: auto !important;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .photo-item.huge, 
+    .photo-item.big {
+        flex: 0 0 100% !important;
+    }
+    .photo-item.huge img, 
+    .photo-item.big img {
+        width: 98% !important;
+        max-height: 95vh !important;
+    }
+    
+    .photo-item.left-landscape img   { 
+        transform: translateX(-10%);
+    }
+    .photo-item.right-landscape img  { 
+        transform: translateX(10%);
+    }
+    .photo-item.center img { 
+        margin-left: auto !important; 
+        margin-right: auto !important; 
+    }
+
+     .diptych-row {
+        flex-wrap: nowrap !important;
+        gap: 0 !important;
+        margin-bottom: 6vh;
+    }
+
+    .photo-item.diptych-member {
+        flex: 0 0 49% !important;
+    }
+
+    .gallery-slider .img-before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        /* This container's width is changed by JS, 
+           acting as a mask for the image below */
+        overflow: hidden; 
+        z-index: 2;
+        margin-bottom: 15vh !important;
+    }
+    .gallery-slider .img-before img {
+        width: 95vw !important; 
+        height: 100% !important;
+        object-fit: cover;
+        display: block;
+        max-width: none !important; 
+    }
+
+    .gallery-slider .img-after {
+        width: 95vw !important;
+        height: 100% !important;
+        object-fit: cover;
+        display: block;
+    }
+    .mobile-margin-top img {
+        margin-top: 10vh !important;
+    }
+
+    .stacked-column {
+        width: 100% !important;
+        gap: 5vh !important; 
+    }
+
+    .photo-item.stacked-pair {
+        width: 70% !important; 
+        flex: 0 0 auto !important;
+        padding: 0 !important; 
+    }
+
+    .photo-item.stacked-pair img {
+        width: 100% !important;
+        max-height: 85vh !important;
+        object-fit: contain;
+    }
+    .photo-item.stacked-pair:first-child {
+        margin-right: 15% !important; 
+        align-self: center;
+    }
+
+    .photo-item.stacked-pair:last-child {
+        margin-left: 15% !important; 
+        align-self: center;
     }
 }
 
