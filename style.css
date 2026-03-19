@@ -81,8 +81,9 @@ body {
 }
 
 .intro-text p {
-    font-family: 'Syne Mono', monospace;
-    font-size: clamp(3rem, 2vw, 1.25rem);
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
+    font-size: 3.5rem; 
     line-height: 1.6;
     color: var(--text-color); 
     margin: 0;
