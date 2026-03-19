@@ -146,7 +146,7 @@ for (let i = 1; i <= photosCount; i++) {
         textBreak.className = 'gallery-text-break';
         textBreak.innerHTML = `
             <div class="text-content">
-                <p>If you'll believe in me, I will believe in you. Is that a bargain?</p>
+                <p>"If you'll believe in me, I will believe in you. Is that a bargain?"</p>
             </div>
         `;
         gallery.appendChild(textBreak);

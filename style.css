@@ -145,7 +145,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0; 
-    padding: 100px 5vw;
+    padding: 200px 5vw;
     max-width: 1600px;
     margin: 0 auto;
     position: relative;
@@ -400,7 +400,6 @@ body {
     font-family: 'Zalando Sans Expanded', sans-serif;
     text-decoration: none;
     color: var(--bg-color);
-    border: 1px solid var(--bg-color);
     padding: 0.5vw 1.5vw;
     transition: 0.3s;
 }
@@ -732,7 +731,7 @@ html {
         max-width: none;
         margin: -7.5vh auto 10px auto !important; 
         z-index: 20;                   
-        border-width: 3px;     
+        border-width: 3px;   
     }
 
     .gallery {
@@ -1053,7 +1052,7 @@ html {
 
      .diptych-row {
         flex-wrap: nowrap !important;
-        gap: 5px !important; 
+        gap: 0 !important; 
         margin-bottom: 8vh !important;
         width: 100%;
         display: flex !important;
@@ -1067,7 +1066,7 @@ html {
 
     .photo-item.diptych-member img {
         width: 100% !important;
-        max-height: 80vh !important; 
+        max-height: 85vh !important; 
         object-fit: contain;
     }
 
@@ -1126,6 +1125,23 @@ html {
     .photo-item.stacked-pair:last-child {
         margin-left: 15% !important; 
         align-self: center;
+    }
+
+    .intro-text {
+        padding: 1% 8vw 0 8vw;
+    }
+    .intro-text p {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .gallery-text-break {
+        padding: 5vh 10vw;
+    }
+    .gallery-text-break p {
+        font-size: 2rem;
+        text-align: center;
+        line-height: 1.4;
     }
 }
 
