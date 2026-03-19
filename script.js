@@ -85,12 +85,13 @@ const layoutClasses = [
 // This loop generates the items and injects them into the empty #gallery
 let diptychContainer = null;
 let stackedContainer = null;
+
 for (let i = 1; i <= photosCount; i++) {
     const div = document.createElement('div');
     div.classList.add('photo-item', ...layoutClasses[i - 1]);
 
-    // Logic for photo 5: Inject the Comparison Slider
     if (i === 5) {
+        // Comparison Slider
         div.innerHTML = `
             <div class="comparison-slider gallery-slider">
                 <img src="images/edited/2.jpg" alt="After" class="img-after">
@@ -104,9 +105,8 @@ for (let i = 1; i <= photosCount; i++) {
                 <input type="range" min="0" max="100" value="50" class="slider-input">
             </div>
         `;
-        } 
-        else {
-        // Logic for all other photos
+    } else {
+        // Regular Gallery Photo
         const img = document.createElement('img');
         img.src = `images/gallery-photos/${i}.jpg`;
         img.alt = `Gallery Image ${i}`;
@@ -118,8 +118,8 @@ for (let i = 1; i <= photosCount; i++) {
         div.appendChild(img);
     }
 
-    // Standard placement logic for 7, 8, 15, 16, 27
     if (i === 7 || i === 8) {
+        // Handle Diptych Group
         if (!diptychContainer) {
             diptychContainer = document.createElement('div');
             diptychContainer.className = 'diptych-row';
@@ -128,23 +128,28 @@ for (let i = 1; i <= photosCount; i++) {
         diptychContainer.appendChild(div);
     } 
     else if (i === 15 || i === 16) {
+        // Handle Stacked Column Group
         if (!stackedContainer) {
             stackedContainer = document.createElement('div');
             stackedContainer.className = 'stacked-column'; 
             gallery.appendChild(stackedContainer);
         }
         stackedContainer.appendChild(div);
-    } else if (i === 27) {
+    } 
+    else {
+        gallery.appendChild(div);
+    }
+
+    if (i === 27) {
+        // Insert Text Break after photo 27
         const textBreak = document.createElement('section');
         textBreak.className = 'gallery-text-break';
         textBreak.innerHTML = `
             <div class="text-content">
-                <p>If you'll belive in me, I will believe in you. Is that a bargin?</p>
+                <p>If you'll believe in me, I will believe in you. Is that a bargain?</p>
             </div>
         `;
         gallery.appendChild(textBreak);
-    } else {
-        gallery.appendChild(div);
     }
 }
 
