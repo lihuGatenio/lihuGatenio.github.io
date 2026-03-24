@@ -1099,7 +1099,7 @@ html {
         margin-right: auto !important; 
     }
 
-     .diptych-row {
+    .diptych-row {
         flex-wrap: nowrap !important;
         gap: 0 !important; 
         margin-bottom: 8vh !important;
@@ -1191,6 +1191,21 @@ html {
         font-size: 2rem;
         text-align: center;
         line-height: 1.4;
+    }
+
+    .photo-item.mobile-landscape-big-force {
+        flex: 0 0 50% !important; 
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .photo-item.mobile-landscape-big-force img {
+        width: 100% !important; 
+        max-height: 90vh !important; 
+        object-fit: contain;
+        margin: 0 auto !important;
     }
 }
 
