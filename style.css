@@ -120,7 +120,7 @@ body {
 .hero {
     height: 100dvh;
     width: 100%;
-    background: url('images/hero-photo-computer/1.jpg') no-repeat center center/cover;
+    background: url('images/hero-photo-computer/1.webp') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -423,7 +423,7 @@ body {
 .contact-content {
     display: flex;
     width: 100%;
-    /* Based on 6361x1220, the height is ~19% of the width of footer-photo/1.jpg */
+    /* Based on 6361x1220, the height is ~19% of the width of footer-photo/1.webp */
     height: 19vw; 
     min-height: 150px; 
 }
@@ -730,7 +730,7 @@ html {
     }
 
     .hero {
-        background: url('images/hero-photo-mobile/1.jpg') no-repeat;
+        background: url('images/hero-photo-mobile/1.webp') no-repeat;
         
         background-size: contain; 
         
@@ -958,7 +958,7 @@ html {
     }
 
     .contact-image img {
-        content: url('images/footer-photo-mobile/1.jpg');
+        content: url('images/footer-photo-mobile/1.webp');
         width: 100% !important;
         height: auto !important;
         display: block !important;
