@@ -13,25 +13,36 @@ body {
 }
 
 /* --- Navigation Bar --- */
-/* .top-nav {
-    width: 100%;
-    height: 10vh; 
-    background-color: var(--bg-color);
+.nav-contact-right {
+    position: absolute;
+    right: 5vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #1a1a1a;
-    padding: 0; 
-    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-end; 
+    text-align: right;
+    z-index: 1001;
+}
 
-    transform: translateY(-100%); 
-    opacity: 0;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-} */
+.nav-contact-right span {
+    font-family: 'Syne Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-color); 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.nav-contact-right a {
+    font-family: 'Syne Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-contact-right a:hover {
+    color: #575757;
+}
 
 .top-nav.visible {
     transform: translateY(0);
