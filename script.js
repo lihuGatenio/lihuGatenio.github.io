@@ -1,7 +1,7 @@
 // Main gallery photos (28 images in subfolder)
 const photosCount = 28;
 // Slideshow photos (1-4 images)
-const featuredPhotos = Array.from({ length: 4 }, (_, i) => `${i + 1}.jpg`);
+const featuredPhotos = Array.from({ length: 4 }, (_, i) => `${i + 1}.webp`);
 
 const gallery = document.getElementById('gallery');
 const lightbox = document.getElementById('lightbox');
@@ -94,9 +94,9 @@ for (let i = 1; i <= photosCount; i++) {
         // Comparison Slider
         div.innerHTML = `
             <div class="comparison-slider gallery-slider">
-                <img src="images/edited/2.jpg" alt="After" class="img-after">
+                <img src="images/edited/2.webp" alt="After" class="img-after">
                 <div class="img-before">
-                    <img src="images/edited/1.jpg" alt="Before">
+                    <img src="images/edited/1.webp" alt="Before">
                 </div>
                 <div class="slider-handle">
                     <div class="handle-line"></div>
@@ -108,7 +108,7 @@ for (let i = 1; i <= photosCount; i++) {
     } else {
         // Regular Gallery Photo
         const img = document.createElement('img');
-        img.src = `images/gallery-photos/${i}.jpg`;
+        img.src = `images/gallery-photos/${i}.webp`;
         img.alt = `Gallery Image ${i}`;
         img.loading = "lazy";
         img.onclick = () => {
