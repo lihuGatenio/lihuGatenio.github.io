@@ -505,37 +505,6 @@ body {
     color: #575757;
 }
 
-.floating-contact {
-    position: fixed; 
-    right: 10px;     
-    top: 50%;         
-    transform: translateY(-50%); 
-    width: 200px;
-    background-color: rgba(26, 26, 26, 0.95); 
-    border: 1px solid #333;
-    border-radius: 15px;  
-    padding: 10px;
-    text-align: center;
-    z-index: 10 !important;  
-    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
-    backdrop-filter: blur(10px); 
-}
-
-.floating-contact h2 {
-    font-family: 'Syne Mono', monospace;
-    font-size: 1rem;
-    margin: 0 0 5px 0;
-    color: #575757;
-    letter-spacing: 1px;
-}
-
-.floating-contact p {
-    font-size: 0.7rem;
-    color: #575757;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
 .email-link-small {
     display: block;
     color: #575757;
@@ -790,17 +759,6 @@ html {
         display: flex;
         justify-content: center;     
         overflow-x: hidden;
-    }
-    
-    .floating-contact {
-        width: 150px; 
-        padding: 8px;
-        right: 5px;  
-    }
-
-    .floating-contact h2 {
-        font-size: 0.8rem; 
-        margin-bottom: 2px;
     }
 
     .email-link-small {
