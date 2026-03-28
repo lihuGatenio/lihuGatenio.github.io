@@ -1004,10 +1004,62 @@ html {
         margin-bottom: 5%;
         margin-top: 10%; 
     }
+    
+    .top-nav {
+        height: 8vh; 
+        padding: 0 2vw !important; 
+    }
+
+    .logo-name {
+        font-size: 5vh;
+        transform: translateY(-2%); 
+    }
+
+    .bio-button {
+        left: 2vw; 
+        font-size: 0.5rem;
+        padding: 4px 8px;
+    }
+
+    .nav-contact-right {
+        right: 5vw;
+    }
+
+    .nav-contact-right span {
+        font-size: 0.45rem;
+    }
+
+    .nav-contact-right a {
+        font-size: 0.5rem; 
+    }
 }
 
 @media (max-width: 932px) and (orientation: landscape) {
-    .top-nav { height: 7vh; }
+    .top-nav {
+        height: 12vh; 
+        padding: 0 3vw !important;
+    }
+
+    .logo-name {
+        font-size: 8vh;
+    }
+
+    .bio-button {
+        left: 3vw;
+        font-size: 0.55rem;
+    }
+
+    .nav-contact-right {
+        right: 9vw;
+    }
+
+    .nav-contact-right span {
+        display: none;
+    }
+
+    .nav-contact-right a {
+        font-size: 0.6rem;
+    }
     .logo-name { font-size: 6.5vh; }
     
     .hero {
