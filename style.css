@@ -655,6 +655,32 @@ body {
     background: #777777; 
 }
 
+/* --- Dream Role Quotes --- */
+.dream-role-text {
+    width: 100%;
+    padding: 10vh 0 !important; 
+    display: flex;
+    justify-content: center;
+}
+
+.dream-role-text .text-content {
+    max-width: 90vw; 
+    width: 100%;
+}
+
+.dream-role-text p {
+    font-family: 'Vina Sans', cursive;
+    font-size: clamp(2rem, 6vw, 4.5rem); 
+    
+    line-height: 1.1; 
+    
+    color: #575757;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
 /* For Firefox (Limited customization) */
 * {
     scrollbar-width: thin;
@@ -1026,11 +1052,11 @@ html {
     }
 
     .nav-contact-right span {
-        font-size: 0.45rem;
+        font-size: 0.6rem;
     }
 
     .nav-contact-right a {
-        font-size: 0.5rem; 
+        font-size: 0.55rem; 
     }
 }
 
