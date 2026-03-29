@@ -876,7 +876,6 @@ html {
     .gallery {
         width: 95% !important;       
         margin: 0 auto !important;  
-        padding: 50px 0 !important; 
         display: flex;
         justify-content: center;     
         overflow-x: hidden;
