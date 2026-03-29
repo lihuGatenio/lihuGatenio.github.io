@@ -264,3 +264,24 @@ const navObserver = new IntersectionObserver((entries) => {
 if (triggerElement && topNav) {
     navObserver.observe(triggerElement);
 }
+
+function toggleBio() {
+    const bioOverlay = document.getElementById('bioOverlay');
+    const isVisible = bioOverlay.style.display === 'flex';
+    
+    if (isVisible) {
+        bioOverlay.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    } else {
+        bioOverlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Disable background scrolling
+    }
+}
+
+// Close bio if clicking outside the content box
+window.addEventListener('click', (e) => {
+    const bioOverlay = document.getElementById('bioOverlay');
+    if (e.target === bioOverlay) {
+        toggleBio();
+    }
+});
