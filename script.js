@@ -27,6 +27,16 @@ featuredDiv.appendChild(imgLayerB);
 const mainTitle = document.querySelector('.main-title');
 if (mainTitle) {
     mainTitle.parentNode.insertBefore(featuredDiv, mainTitle.nextSibling);
+    
+    // Insert the intro quote right after the slideshow
+    const introQuote = document.createElement('section');
+    introQuote.className = 'gallery-text-break dream-role-text'; 
+    introQuote.innerHTML = `
+        <div class="text-content">
+            <p>With a suicide behind the scenes, pictures that been taken from the internet and lies.. I got the dream role to be a military photographer.</p>
+        </div>
+    `;
+    featuredDiv.parentNode.insertBefore(introQuote, featuredDiv.nextSibling);
 }
 
 let currentIndex = 0;
@@ -126,6 +136,16 @@ for (let i = 1; i <= photosCount; i++) {
             gallery.appendChild(diptychContainer);
         }
         diptychContainer.appendChild(div);
+        if (i === 8) {
+        const cameraQuote = document.createElement('section');
+        cameraQuote.className = 'gallery-text-break dream-role-text'; 
+        cameraQuote.innerHTML = `
+            <div class="text-content">
+                <p>Never in my life did I think a camera had more than one big button on the side.</p>
+            </div>
+        `;
+        gallery.appendChild(cameraQuote);
+    }
     } 
     else if (i === 15 || i === 16) {
         // Handle Stacked Column Group
@@ -135,9 +155,33 @@ for (let i = 1; i <= photosCount; i++) {
             gallery.appendChild(stackedContainer);
         }
         stackedContainer.appendChild(div);
+
+        if (i === 16) {
+            const logisticsQuote = document.createElement('section');
+            logisticsQuote.className = 'gallery-text-break dream-role-text'; 
+            logisticsQuote.innerHTML = `
+                <div class="text-content">
+                    <p>I was assigned to the public relations section of the Logistics Corps.<br>
+                    The corps of storekeepers, cooks, drivers and all the inferiors of society of all kinds.<br>
+                    I'm the inferior military photographer.</p>
+                </div>
+            `;
+            gallery.appendChild(logisticsQuote);
+        }
     } 
     else {
         gallery.appendChild(div);
+
+        if (i === 25) {
+            const finalQuote = document.createElement('section');
+            finalQuote.className = 'gallery-text-break dream-role-text'; 
+            finalQuote.innerHTML = `
+                <div class="text-content">
+                    <p>Three years went by and I can tell you right now that everything was beautiful and nothing hurt. (:</p>
+                </div>
+            `;
+            gallery.appendChild(finalQuote);
+        }
     }
 
     if (i === 27) {
@@ -152,6 +196,15 @@ for (let i = 1; i <= photosCount; i++) {
         gallery.appendChild(textBreak);
     }
 }
+
+const finalCTA = document.createElement('section');
+finalCTA.className = 'gallery-text-break dream-role-text'; 
+finalCTA.innerHTML = `
+    <div class="text-content">
+        <p>For a full version, printed short story photography book contact me via email.</p>
+    </div>
+`;
+gallery.appendChild(finalCTA);
 
 /* --- Comparison Slider Logic --- */
 const initSliders = () => {
