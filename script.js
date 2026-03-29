@@ -197,15 +197,6 @@ for (let i = 1; i <= photosCount; i++) {
     }
 }
 
-const finalCTA = document.createElement('section');
-finalCTA.className = 'gallery-text-break dream-role-text'; 
-finalCTA.innerHTML = `
-    <div class="text-content">
-        <p>For a full version, printed short story photography book contact me via email.</p>
-    </div>
-`;
-gallery.appendChild(finalCTA);
-
 /* --- Comparison Slider Logic --- */
 const initSliders = () => {
     const sliders = document.querySelectorAll('.comparison-slider');
