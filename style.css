@@ -683,27 +683,30 @@ body {
 
 /* --- Bio Overlay Styles --- */
 .bio-overlay {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(10, 10, 10, 0.98); /* Near solid black */
+    background-color: rgba(10, 10, 10, 0.98);
     backdrop-filter: blur(10px);
-    z-index: 3000; /* Above the nav and lightbox */
+    z-index: 3000;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px; 
+    overflow-y: auto; 
 }
 
 .bio-content {
     display: flex;
-    max-width: 900px;
+    max-width: 1000px; 
     width: 100%;
     background: #111;
     border: 1px solid #222;
-    animation: fadeInBio 0.5s ease;
+    position: relative;
+    height: auto; 
+    min-height: min-content;
 }
 
 .bio-image {
@@ -720,10 +723,11 @@ body {
 
 .bio-text {
     flex: 0 0 60%;
-    padding: 40px;
+    padding: 60px 40px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .bio-text h2 {
@@ -735,10 +739,10 @@ body {
 
 .bio-text p {
     font-family: 'Alegreya', serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.1rem; 
+    line-height: 1.5;
     color: #999;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .close-bio {
