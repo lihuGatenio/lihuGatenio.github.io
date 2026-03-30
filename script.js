@@ -30,7 +30,7 @@ if (mainTitle) {
     
     // Insert the intro quote right after the slideshow
     const introQuote = document.createElement('section');
-    introQuote.className = 'gallery-text-break dream-role-text'; 
+    introQuote.className = 'gallery-text-break dream-role-text text-right'; 
     introQuote.innerHTML = `
         <div class="text-content">
             <p>With a suicide behind the scenes, pictures that been taken from the internet and lies.. I got the dream role to be a military photographer.</p>
@@ -138,7 +138,7 @@ for (let i = 1; i <= photosCount; i++) {
         diptychContainer.appendChild(div);
         if (i === 8) {
         const cameraQuote = document.createElement('section');
-        cameraQuote.className = 'gallery-text-break dream-role-text'; 
+        cameraQuote.className = 'gallery-text-break dream-role-text text-right'; 
         cameraQuote.innerHTML = `
             <div class="text-content">
                 <p>Never in my life did I think a camera had more than one big button on the side.</p>
@@ -158,7 +158,7 @@ for (let i = 1; i <= photosCount; i++) {
 
         if (i === 16) {
             const logisticsQuote = document.createElement('section');
-            logisticsQuote.className = 'gallery-text-break dream-role-text'; 
+            logisticsQuote.className = 'gallery-text-break dream-role-text text-left'; 
             logisticsQuote.innerHTML = `
                 <div class="text-content">
                     <p>I was assigned to the public relations section of the Logistics Corps.<br>
@@ -190,7 +190,7 @@ for (let i = 1; i <= photosCount; i++) {
         textBreak.className = 'gallery-text-break';
         textBreak.innerHTML = `
             <div class="text-content">
-                <p>"If you'll believe in me, I will believe in you. Is that a bargain?"</p>
+                <p>"If you'll believe in me, I will believe in you. <br> Is that a bargain?"</p>
             </div>
         `;
         gallery.appendChild(textBreak);
