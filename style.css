@@ -970,9 +970,13 @@ html {
         display: block; 
     }
 
-    .photo-item.huge img   { width: 100%; }
+    .photo-item.huge img   { 
+        width: 100%; 
+        margin-top: -10vh;
+    }
     .photo-item.big img    { 
         width: 95%; 
+        margin-top: -5vh;
     }
     .photo-item.wide img   {
         width: 85%;
@@ -1210,9 +1214,62 @@ html {
     .nav-contact-right a {
         font-size: 0.55rem; 
     }
+
+    .dream-role-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: auto;
+        padding: 2vh 0 10vh !important;
+    }
+
+    .dream-role-text .text-content {
+        position: static; 
+        transform: none !important;
+        width: 90vw;
+        max-width: 100%;
+        margin: 0 auto !important;
+    }
+
+    .dream-role-text p {
+        text-align: center !important;
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.2;
+    }
+
+    .book-cta p {
+        font-size: 1.4rem;
+        width: 90vw;
+    }
 }
 
 @media (max-width: 932px) and (orientation: landscape) {
+    .dream-role-text {
+        min-height: 60vh; 
+        padding: 10vh 0 !important;
+    }
+
+    .dream-role-text .text-content {
+        width: 60vw; 
+    }
+
+    .dream-role-text.text-left .text-content {
+        left: 20%; 
+    }
+
+    .dream-role-text.text-right .text-content {
+        left: 80%;
+    }
+
+    .dream-role-text p {
+        font-size: 1.5rem; 
+        line-height: 1.1;
+    }
+
+    .book-cta {
+        padding: 5vh 0;
+    }
+
     .top-nav {
         height: 12vh; 
         padding: 0 3vw !important;
