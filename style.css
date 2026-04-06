@@ -184,7 +184,7 @@ body {
     width: 90%;          
     max-width: 750px;
     aspect-ratio: 3 / 2; 
-    margin: -10vh auto 40px auto; 
+    margin: -10vh auto 50px auto; 
     background: #000;
     border: 5px solid #000; 
     position: relative; 
@@ -330,7 +330,7 @@ body {
     align-items: center;   
     width: 100%;
     gap: 30px;              
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
 }
 
 .photo-item.stacked-pair {
@@ -405,7 +405,7 @@ body {
 }
 
 .dream-role-text.text-left .text-content {
-    left: 25%;
+    left: 30%;
     transform: translate(-50%, -50%);
 }
 
@@ -414,7 +414,7 @@ body {
 }
 
 .dream-role-text.text-right .text-content {
-    left: 75%; 
+    left: 70%; 
     transform: translate(-50%, -50%);
 }
 
@@ -422,6 +422,9 @@ body {
     text-align: center;
 }
 
+.dream-role-text.margin-down-text {
+    margin-bottom: 10vh !important; 
+}
 
 /* --- Lightbox & UI Components --- */
 .lightbox {
@@ -503,7 +506,7 @@ body {
 }
 
 .email-link {
-    font-size: clamp(0.7rem, 1.2vw, 1.1rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.8rem);
     font-family: 'Zalando Sans Expanded', sans-serif;
     text-decoration: none;
     color: var(--bg-color);
@@ -761,7 +764,7 @@ body {
 
 .bio-text {
     flex: 0 0 60%;
-    padding: 60px 40px; 
+    padding: 10px 40px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -786,7 +789,7 @@ body {
 .close-bio {
     position: absolute;
     top: 30px;
-    right: 40px;
+    right: 50px;
     font-size: 40px;
     color: #fff;
     cursor: pointer;
@@ -802,24 +805,33 @@ body {
 .book-cta {
     width: 100%;
     background-color: var(--bg-color);
-    padding: 8vh 5vw 4vh 5vw; 
+    padding: 5vh 0; 
+    
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
+    
     position: relative;
     z-index: 10;
+    box-sizing: border-box;
 }
 
 .book-cta-content {
+    width: 90vw; 
+    max-width: 1200px; 
+    margin: 0 auto;
     text-align: center;
 }
 
 .book-cta p {
     font-family: 'Alegreya', serif;
     font-weight: 400;
-    font-size: 2rem;
-    line-height: 1.6;
+    font-size: clamp(1.2rem, 4vw, 2rem); 
+    line-height: 1.4;
     color: #888;
     margin: 0;
+    padding: 0;
 }
 
 /* For Firefox (Limited customization) */
@@ -958,9 +970,13 @@ html {
         display: block; 
     }
 
-    .photo-item.huge img   { width: 100%; }
+    .photo-item.huge img   { 
+        width: 100%; 
+        margin-top: -10vh;
+    }
     .photo-item.big img    { 
         width: 95%; 
+        margin-top: -5vh;
     }
     .photo-item.wide img   {
         width: 85%;
@@ -1198,9 +1214,62 @@ html {
     .nav-contact-right a {
         font-size: 0.55rem; 
     }
+
+    .dream-role-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: auto;
+        padding: 2vh 0 10vh !important;
+    }
+
+    .dream-role-text .text-content {
+        position: static; 
+        transform: none !important;
+        width: 90vw;
+        max-width: 100%;
+        margin: 0 auto !important;
+    }
+
+    .dream-role-text p {
+        text-align: center !important;
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.2;
+    }
+
+    .book-cta p {
+        font-size: 1.4rem;
+        width: 90vw;
+    }
 }
 
 @media (max-width: 932px) and (orientation: landscape) {
+    .dream-role-text {
+        min-height: 60vh; 
+        padding: 10vh 0 !important;
+    }
+
+    .dream-role-text .text-content {
+        width: 60vw; 
+    }
+
+    .dream-role-text.text-left .text-content {
+        left: 20%; 
+    }
+
+    .dream-role-text.text-right .text-content {
+        left: 80%;
+    }
+
+    .dream-role-text p {
+        font-size: 1.5rem; 
+        line-height: 1.1;
+    }
+
+    .book-cta {
+        padding: 5vh 0;
+    }
+
     .top-nav {
         height: 12vh; 
         padding: 0 3vw !important;

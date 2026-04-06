@@ -174,7 +174,7 @@ for (let i = 1; i <= photosCount; i++) {
 
         if (i === 25) {
             const finalQuote = document.createElement('section');
-            finalQuote.className = 'gallery-text-break dream-role-text'; 
+            finalQuote.className = 'gallery-text-break dream-role-text margin-down-text'; 
             finalQuote.innerHTML = `
                 <div class="text-content">
                     <p>Three years went by and I can tell you right now that everything was beautiful and nothing hurt. (:</p>
