@@ -31,6 +31,7 @@ if (mainTitle) {
     // Insert the intro quote right after the slideshow
     const introQuote = document.createElement('section');
     introQuote.className = 'gallery-text-break dream-role-text text-right'; 
+    introQuote.id = 'quote-intro';
     introQuote.innerHTML = `
         <div class="text-content">
             <p>With a suicide behind the scenes, pictures that been taken from the internet and lies.. I got the dream role to be a military photographer.</p>
@@ -138,6 +139,7 @@ for (let i = 1; i <= photosCount; i++) {
         diptychContainer.appendChild(div);
         if (i === 8) {
         const cameraQuote = document.createElement('section');
+        cameraQuote.id = 'quote-camera';
         cameraQuote.className = 'gallery-text-break dream-role-text text-right'; 
         cameraQuote.innerHTML = `
             <div class="text-content">
@@ -158,6 +160,7 @@ for (let i = 1; i <= photosCount; i++) {
 
         if (i === 16) {
             const logisticsQuote = document.createElement('section');
+            logisticsQuote.id = 'quote-logistics';
             logisticsQuote.className = 'gallery-text-break dream-role-text text-left'; 
             logisticsQuote.innerHTML = `
                 <div class="text-content">
@@ -174,6 +177,7 @@ for (let i = 1; i <= photosCount; i++) {
 
         if (i === 25) {
             const finalQuote = document.createElement('section');
+            finalQuote.id = 'quote-final';
             finalQuote.className = 'gallery-text-break dream-role-text margin-down-text'; 
             finalQuote.innerHTML = `
                 <div class="text-content">
@@ -188,6 +192,7 @@ for (let i = 1; i <= photosCount; i++) {
         // Insert Text Break after photo 27
         const textBreak = document.createElement('section');
         textBreak.className = 'gallery-text-break';
+        textBreak.id = 'quote-bargain';
         textBreak.innerHTML = `
             <div class="text-content">
                 <p>"If you'll believe in me, I will believe in you. <br> Is that a bargain?"</p>
