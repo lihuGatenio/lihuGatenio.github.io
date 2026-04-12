@@ -853,14 +853,54 @@ html {
         text-align: center;
         font-size: 1.5rem;
     }
-
-    .gallery-text-break {
-        padding: 5vh 10vw;
+    
+    .dream-role-text {
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block;
+        min-height: auto;
     }
-    .gallery-text-break p {
-        font-size: 1.1rem;
-        text-align: center;
-        line-height: 1.4;
+
+    #quote-intro {
+        padding-top: 10vh !important;
+        padding-bottom: 5vh !important;
+    }
+
+    #quote-camera {
+        padding-top: 3vh !important;
+        padding-bottom: 10vh !important;
+    }
+
+    #quote-logistics {
+        padding-top: 6vh !important;
+        padding-bottom: 15vh !important;
+    }
+
+    #quote-final {
+        padding-top: 4vh !important;
+        padding-bottom: 10vh !important;
+    }
+
+    #quote-bargain {
+        padding: 10vh 0 !important;
+    }
+
+    .dream-role-text .text-content {
+        position: static;
+        transform: none !important;
+        width: 95vw; 
+        max-width: 100%;
+        margin: 0 auto !important;
+    }
+
+    .dream-role-text p {
+        text-align: center !important;
+        line-height: 1.05; 
+        
+        font-size: clamp(1.8rem, 8.5vw, 2.8rem); 
+        
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .top-nav { height: 7vh; }
@@ -1215,31 +1255,14 @@ html {
         font-size: 0.55rem; 
     }
 
-    .dream-role-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: auto;
-        padding: 2vh 0 10vh !important;
-    }
-
-    .dream-role-text .text-content {
-        position: static; 
-        transform: none !important;
-        width: 90vw;
-        max-width: 100%;
-        margin: 0 auto !important;
-    }
-
-    .dream-role-text p {
-        text-align: center !important;
-        font-size: clamp(1.8rem, 8vw, 2.5rem);
-        line-height: 1.2;
+    .book-cta {
+        padding: 0 0;
     }
 
     .book-cta p {
-        font-size: 1.4rem;
+        font-size: 1rem;
         width: 90vw;
+        font-family: 'Vina Sans', cursive; 
     }
 }
 
