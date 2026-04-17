@@ -96,38 +96,20 @@ const layoutClasses = [
 // This loop generates the items and injects them into the empty #gallery
 let diptychContainer = null;
 let stackedContainer = null;
-
 for (let i = 1; i <= photosCount; i++) {
     const div = document.createElement('div');
     div.classList.add('photo-item', ...layoutClasses[i - 1]);
 
-    if (i === 5) {
-        // Comparison Slider
-        div.innerHTML = `
-            <div class="comparison-slider gallery-slider">
-                <img src="images/edited/2.webp" alt="After" class="img-after">
-                <div class="img-before">
-                    <img src="images/edited/1.webp" alt="Before">
-                </div>
-                <div class="slider-handle">
-                    <div class="handle-line"></div>
-                    <div class="handle-circle"></div>
-                </div>
-                <input type="range" min="0" max="100" value="50" class="slider-input">
-            </div>
-        `;
-    } else {
-        // Regular Gallery Photo
-        const img = document.createElement('img');
-        img.src = `images/gallery-photos/${i}.webp`;
-        img.alt = `Gallery Image ${i}`;
-        img.loading = "lazy";
-        img.onclick = () => {
-            lightbox.style.display = "block";
-            lightboxImg.src = img.src;
-        };
-        div.appendChild(img);
-    }
+    // Regular Gallery Photo 
+    const img = document.createElement('img');
+    img.src = `images/gallery-photos/${i}.webp`;
+    img.alt = `Gallery Image ${i}`;
+    img.loading = "lazy";
+    img.onclick = () => {
+        lightbox.style.display = "block";
+        lightboxImg.src = img.src;
+    };
+    div.appendChild(img);
 
     if (i === 7 || i === 8) {
         // Handle Diptych Group
@@ -137,17 +119,18 @@ for (let i = 1; i <= photosCount; i++) {
             gallery.appendChild(diptychContainer);
         }
         diptychContainer.appendChild(div);
+        
         if (i === 8) {
-        const cameraQuote = document.createElement('section');
-        cameraQuote.id = 'quote-camera';
-        cameraQuote.className = 'gallery-text-break dream-role-text text-right'; 
-        cameraQuote.innerHTML = `
-            <div class="text-content">
-                <p>Never in my life did I think a camera had more than one big button on the side.</p>
-            </div>
-        `;
-        gallery.appendChild(cameraQuote);
-    }
+            const cameraQuote = document.createElement('section');
+            cameraQuote.id = 'quote-camera';
+            cameraQuote.className = 'gallery-text-break dream-role-text text-right'; 
+            cameraQuote.innerHTML = `
+                <div class="text-content">
+                    <p>Never in my life did I think a camera had more than one big button on the side.</p>
+                </div>
+            `;
+            gallery.appendChild(cameraQuote);
+        }
     } 
     else if (i === 15 || i === 16) {
         // Handle Stacked Column Group
@@ -189,7 +172,6 @@ for (let i = 1; i <= photosCount; i++) {
     }
 
     if (i === 27) {
-        // Insert Text Break after photo 27
         const textBreak = document.createElement('section');
         textBreak.className = 'gallery-text-break';
         textBreak.id = 'quote-bargain';
@@ -201,36 +183,6 @@ for (let i = 1; i <= photosCount; i++) {
         gallery.appendChild(textBreak);
     }
 }
-
-/* --- Comparison Slider Logic --- */
-const initSliders = () => {
-    const sliders = document.querySelectorAll('.comparison-slider');
-    
-    sliders.forEach(slider => {
-        const input = slider.querySelector('.slider-input');
-        const beforeContainer = slider.querySelector('.img-before');
-        const beforeImg = beforeContainer.querySelector('img');
-        const handle = slider.querySelector('.slider-handle');
-
-        const syncImageSize = () => {
-            const sliderWidth = slider.offsetWidth;
-            if (sliderWidth > 0) {
-                beforeImg.style.width = sliderWidth + 'px';
-            }
-        };
-
-        syncImageSize();
-        window.addEventListener('resize', syncImageSize);
-
-        input.addEventListener('input', (e) => {
-            const value = e.target.value + "%";
-            beforeContainer.style.width = value; 
-            handle.style.left = value;
-        });
-    });
-};
-// Call the function to initialize sliders after DOM content is loaded
-initSliders();
 
 /* --- UI Handlers --- */
 closeBtn.onclick = () => lightbox.style.display = "none";

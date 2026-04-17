@@ -583,100 +583,6 @@ body {
     color: #000;
 }
 
-/* --- Comparison Container --- */
-.comparison-slider.gallery-slider {
-   height: 100%;
-    object-fit: cover;
-    display: block;
-    max-width: none;
-    position: relative;
-    overflow: hidden; /
-}
-
-.gallery-slider .img-before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 50%;
-    overflow: hidden; 
-    z-index: 2; 
-}
-
-.gallery-slider .img-after {
-    position: relative;
-    z-index: 1; 
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.gallery-slider .img-before img {
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    max-width: none !important; 
-    /* The width is handled by the JS syncImageSize function */
-}
-
-/* The Draggable Line & Handle */
-.slider-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    appearance: none;
-    z-index: 5;
-    cursor: ew-resize;
-}
-
-.slider-handle {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 2px;
-    background: #575757;
-    z-index: 4;
-    pointer-events: none;
-}
-
-.handle-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    border: 2px solid #575757;
-    border-radius: 50%;
-    background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(5px);
-}
-
-/* Removes default styling for Chrome, Safari, Edge, and Opera */
-.slider-input::-webkit-slider-thumb {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 15px; 
-    height: 15px;
-    background: #575757; 
-    border-radius: 50%;
-    cursor: ew-resize;
-}
-
-/* Removes default styling for Firefox */
-.slider-input::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-    background: #575757;
-    border-radius: 50%;
-    cursor: ew-resize;
-    border: none;
-}
-
 /* --- Custom Scrollbar --- */
 ::-webkit-scrollbar {
     width: 12px;
@@ -1098,31 +1004,6 @@ html {
         margin-left: 20%;      
     }
 
-    .gallery-slider .img-before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        /* This container's width is changed by JS, 
-           acting as a mask for the image below */
-        overflow: hidden; 
-        z-index: 2;
-    }
-
-    .gallery-slider .img-before img {
-        width: 95vw !important; 
-        height: 100% !important;
-        object-fit: cover;
-        display: block;
-        max-width: none !important; 
-    }
-
-    .gallery-slider .img-after {
-        width: 95vw !important;
-        height: 100% !important;
-        object-fit: cover;
-        display: block;
-    }
     .photo-item.push-up   { margin-top: -2vh; }
     .photo-item.push-down { margin-top: 2vh; }
 
@@ -1503,37 +1384,6 @@ html {
         object-fit: contain;
     }
     
-    .gallery-slider .img-before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%; 
-        overflow: hidden; 
-        z-index: 2;
-    }
-
-    .gallery-slider .img-before img {
-        width: 40vw !important; 
-        height: auto !important; 
-        display: block;
-        max-width: none !important; 
-    }
-
-    .gallery-slider .img-after {
-        width: 40vw !important;
-        height: auto !important; 
-        display: block;
-        margin: 0 auto !important; 
-    }
-
-    .gallery-slider {
-        width: 40vw !important;
-        height: auto !important; 
-        margin: 0 auto !important;
-        position: relative;
-        overflow: hidden;
-    }
-
     .mobile-margin-top img {
         margin-top: 10vh !important;
     }
