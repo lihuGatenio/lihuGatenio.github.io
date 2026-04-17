@@ -37,7 +37,7 @@ body {
 }
 
 .nav-contact-right a {
-    font-family: 'Syne Mono', monospace;
+    font-family: "Zalando Sans Expanded", sans-serif;
     font-size: 0.7rem;
     color: var(--text-color);
     text-decoration: none;
