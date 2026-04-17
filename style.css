@@ -73,6 +73,10 @@ body {
     transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
+.mobile-contact-text {
+    display: none;
+}
+
 .bio-button {
     position: absolute;
     left: 5vw;
@@ -824,10 +828,7 @@ html {
         overflow-wrap: break-word;
     }
 
-    .top-nav { height: 7vh; }
-    .logo-name { font-size: 6.5vh; }
-
-     .rotate-hint {
+    .rotate-hint {
         position: fixed;
         top: 40%;
         left: 50%;
@@ -1122,31 +1123,42 @@ html {
         margin-bottom: 5%;
         margin-top: 10%; 
     }
-
+     
     .top-nav {
-        height: 8vh; 
-        padding: 0 2vw !important; 
-    }
-
-    .logo-name {
-        font-size: 5vh;
-        transform: translateY(-2%); 
+        height: 8vh !important;
+        padding: 0 4vw !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
     }
 
     .bio-button {
         display: none !important;
     }
 
-    .nav-contact-right {
-        right: 5vw;
+    .mobile-contact-text {
+        display: block !important;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        padding-left: 10px;
     }
 
-    .nav-contact-right span {
-        font-size: 0.6rem;
+    .logo-name {
+        font-size: 4.5vh !important;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
     }
 
     .nav-contact-right a {
-        font-size: 0.55rem; 
+        font-size: 0.5rem !important;
+        padding-right: 15px !important;
+    }
+    
+    .nav-contact-right span {
+        display: none;
     }
 
     .book-cta {
@@ -1164,6 +1176,7 @@ html {
         text-align: center;
         line-height: 1.4;
     }
+    
 }
 
 @media (max-width: 932px) and (orientation: landscape) {
@@ -1277,8 +1290,14 @@ html {
         padding: 0 3vw !important;
     }
 
-    .logo-name {
-        font-size: 8vh;
+    .mobile-contact-text {
+        display: block !important;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        padding-right: 3px !important;
+        position: absolute;
+        left: 5vw;
     }
 
     .bio-button {
@@ -1296,6 +1315,7 @@ html {
     .nav-contact-right a {
         font-size: 1rem;
     }
+
     .logo-name { font-size: 6.5vh; }
     
     .hero {
