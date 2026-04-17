@@ -849,15 +849,13 @@ html {
     .intro-text {
         padding: 1% 8vw 0 8vw;
     }
+
     .intro-text p {
         text-align: center;
         font-size: 1.5rem;
     }
     
     .dream-role-text {
-        /* padding-left: 20vw !important;
-        padding-right: 20vw !important; */
-        
         display: block;
         min-height: auto;
         box-sizing: border-box;
@@ -874,7 +872,7 @@ html {
         padding-left: 27vw !important;
         padding-right: 13vw !important;
         padding-top: 0vh !important;
-        padding-bottom: 9vh !important;
+        padding-bottom: 6vh !important;
     }
 
     #quote-logistics {
@@ -896,7 +894,7 @@ html {
     }
 
     #quote-bargain {
-        padding: 10vh 0 !important;
+        padding-top: 10vh !important;
         font-size: 1rem !important;
         text-align: center;
         line-height: 1;
@@ -1065,7 +1063,7 @@ html {
     .diptych-row {
         flex-wrap: nowrap !important;
         gap: 3px;
-        margin-bottom: 2vh;
+        margin-bottom: 0vh;
     }
     .photo-item.diptych-member {
         flex: 0 0 49% !important;
@@ -1255,9 +1253,7 @@ html {
     }
 
     .bio-button {
-        left: 2vw; 
-        font-size: 0.5rem;
-        padding: 4px 8px;
+        display: none !important;
     }
 
     .nav-contact-right {
@@ -1277,7 +1273,7 @@ html {
     }
 
     .book-cta p {
-        font-size: 1rem;
+        font-size: 0.8rem;
         width: 90vw;
         font-family: 'Vina Sans', cursive; 
     }
@@ -1291,29 +1287,108 @@ html {
 
 @media (max-width: 932px) and (orientation: landscape) {
     .dream-role-text {
-        min-height: 60vh; 
-        padding: 10vh 0 !important;
+        position: relative;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .dream-role-text .text-content {
-        width: 60vw; 
-    }
-
-    .dream-role-text.text-left .text-content {
-        left: 20%; 
-    }
-
-    .dream-role-text.text-right .text-content {
-        left: 80%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
     }
 
     .dream-role-text p {
-        font-size: 1.5rem; 
-        line-height: 1.1;
+        font-size: clamp(1rem, 5vh, 1.8rem) !important; 
+        line-height: 0.95 !important;
+        margin: 0;
     }
 
-    .book-cta {
-        padding: 5vh 0;
+    #quote-intro { 
+        min-height: 25vh !important; 
+        
+        padding-top: 15vh !important; 
+    }
+
+    #quote-intro .text-content {
+        width: 60vw;
+        left: 80%;
+        top: auto;
+        bottom: 0;
+        transform: translateX(-85%) translateY(70%); 
+        padding-right: 0vw;
+    }
+
+    #quote-intro p { 
+        text-align: left !important; 
+    }
+
+    #quote-camera { 
+        padding: 0 !important; 
+        
+        min-height: 30vh; 
+    }
+
+    #quote-camera .text-content {
+        width: 55vw;
+        left: 85%;
+        top: 50%;
+        transform: translate(-85%, -50%);
+    }
+
+    #quote-camera p { 
+        text-align: left !important; 
+    }
+
+    #quote-logistics { 
+        min-height: 40vh; 
+        padding: 0 !important; 
+    }
+
+    #quote-logistics .text-content {
+        width: 65vw;
+        left: 15%; 
+        transform: translate(-15%, -50%);
+    }
+
+    #quote-logistics p { text-align: left !important; }
+
+    #quote-final { 
+        min-height: 30vh; 
+        padding: 0 !important; 
+    }
+
+    #quote-final .text-content {
+        width: 60vw;
+        left: 75%;
+        transform: translate(-75%, -50%);
+    }
+
+    #quote-final p { text-align: left !important; }
+
+    #quote-bargain {
+        min-height: 15vh !important;
+    }
+
+    #quote-bargain .text-content {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: 0 auto !important;
+        width: 80vw;
+        padding: 0;
+    }
+
+    #quote-bargain p { 
+        text-align: center !important; 
+        font-size: 1.25rem !important;
+    }
+
+    .book-cta p {
+        font-size: 1.25rem !important;
+        width: 80vw;
     }
 
     .top-nav {
@@ -1326,8 +1401,7 @@ html {
     }
 
     .bio-button {
-        left: 3vw;
-        font-size: 0.55rem;
+        display: none !important;
     }
 
     .nav-contact-right {
@@ -1413,7 +1487,6 @@ html {
     .diptych-row {
         flex-wrap: nowrap !important;
         gap: 0 !important; 
-        margin-bottom: 8vh !important;
         width: 100%;
         display: flex !important;
         justify-content: center !important;
@@ -1429,34 +1502,38 @@ html {
         max-height: 85vh !important; 
         object-fit: contain;
     }
-
+    
     .gallery-slider .img-before {
         position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
-        /* This container's width is changed by JS, 
-           acting as a mask for the image below */
+        height: 100%; 
         overflow: hidden; 
         z-index: 2;
-        margin-bottom: 15vh !important;
-        
     }
+
     .gallery-slider .img-before img {
-        width: 85vw !important; 
-        height: 100% !important;
-        object-fit: cover;
+        width: 40vw !important; 
+        height: auto !important; 
         display: block;
         max-width: none !important; 
     }
 
     .gallery-slider .img-after {
-        width: 85vw !important;
-        height: 100% !important;
-        object-fit: cover;
+        width: 40vw !important;
+        height: auto !important; 
         display: block;
+        margin: 0 auto !important; 
     }
-    
+
+    .gallery-slider {
+        width: 40vw !important;
+        height: auto !important; 
+        margin: 0 auto !important;
+        position: relative;
+        overflow: hidden;
+    }
+
     .mobile-margin-top img {
         margin-top: 10vh !important;
     }
@@ -1488,8 +1565,9 @@ html {
     }
 
     .intro-text {
-        padding: 1% 8vw 0 8vw;
+        padding: 4% 8vw 0 8vw;
     }
+
     .intro-text p {
         text-align: center;
         font-size: 2rem;

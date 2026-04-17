@@ -1,7 +1,7 @@
 // Main gallery photos (28 images in subfolder)
 const photosCount = 28;
 // Slideshow photos (1-4 images)
-const featuredPhotos = Array.from({ length: 4 }, (_, i) => `${i + 1}.webp`);
+const featuredPhotos = Array.from({ length: 5 }, (_, i) => `${i + 1}.webp`);
 
 const gallery = document.getElementById('gallery');
 const lightbox = document.getElementById('lightbox');
