@@ -166,7 +166,7 @@ for (let i = 1; i <= photosCount; i++) {
                 <div class="text-content">
                     <p>I was assigned to the public relations section of the Logistics Corps.<br>
                     The corps of storekeepers, cooks, drivers and all the inferiors of society of all kinds.<br>
-                    I'm the inferior military photographer.</p>
+                    I'm the inferior photographer.</p>
                 </div>
             `;
             gallery.appendChild(logisticsQuote);
