@@ -137,7 +137,7 @@ body {
 /* --- Introduction Text --- */
 .intro-text {
     background-color: var(--bg-color);
-    padding: 8vh 5vw 0 5vw; 
+    padding: 8vh 5vw 4vw 5vw; 
     display: flex;
     justify-content: center;
     position: relative;
@@ -152,8 +152,8 @@ body {
 .intro-text p {
     font-family: 'Alegreya', serif;
     font-weight: 400;
-    font-size: 3.5rem; 
-    line-height: 1.6;
+    font-size: 3rem; 
+    line-height: 1;
     color: var(--text-color); 
     margin: 0;
 }
