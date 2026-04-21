@@ -34,7 +34,7 @@ if (mainTitle) {
     introQuote.id = 'quote-intro';
     introQuote.innerHTML = `
         <div class="text-content">
-            <p>With a suicide behind the scenes, pictures that been taken from the internet and lies.. I got the dream role to be a military photographer.</p>
+            <p>With a suicide behind the scenes, pictures taken from the internet and lies.. I got the dream role to be a military photographer.</p>
         </div>
     `;
     featuredDiv.parentNode.insertBefore(introQuote, featuredDiv.nextSibling);

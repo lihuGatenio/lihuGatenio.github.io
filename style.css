@@ -1127,38 +1127,56 @@ html {
     .top-nav {
         height: 8vh !important;
         padding: 0 4vw !important;
-        display: flex !important;
-        justify-content: space-between !important;
+        display: grid !important;
+        grid-template-columns: 1fr auto 1fr !important; 
         align-items: center !important;
-    }
-
-    .bio-button {
-        display: none !important;
+        box-sizing: border-box !important;
     }
 
     .mobile-contact-text {
         display: block !important;
-        font-size: 1rem;
+        font-size: 0.9rem; 
         letter-spacing: 1px;
         white-space: nowrap;
-        padding-left: 10px;
+        justify-self: center !important; 
+        text-align: center !important;
+        padding-left: 0 !important; 
+    }
+
+    .nav-center {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100% !important; 
     }
 
     .logo-name {
         font-size: 4.5vh !important;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 0;
+        margin: 0 !important;
+        white-space: nowrap;
+        display: block !important;
+        line-height: 1 !important; 
+        transform: translateY(10%);
+    }
+
+    .nav-contact-right {
+        display: flex !important;
+        justify-content: flex-end !important;
+        justify-self: end;
+    }
+
+    .nav-contact-right span {
+        display: none !important; 
     }
 
     .nav-contact-right a {
         font-size: 0.5rem !important;
-        padding-right: 15px !important;
+        text-decoration: none;
+        white-space: nowrap;
     }
-    
-    .nav-contact-right span {
-        display: none;
+
+    .bio-button {
+        display: none !important;
     }
 
     .book-cta {
@@ -1286,37 +1304,58 @@ html {
     }
 
     .top-nav {
-        height: 12vh; 
-        padding: 0 3vw !important;
+        display: flex !important;
+        justify-content: space-between !important; 
+        align-items: center !important;
+        height: 12vh !important; 
+        padding: 0 4vw !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .mobile-contact-text {
-        display: block !important;
+        flex: 1 !important;
+        display: flex !important;
+        justify-content: center !important; 
         font-size: 1rem;
         letter-spacing: 1px;
         white-space: nowrap;
-        padding-right: 3px !important;
-        position: absolute;
-        left: 5vw;
+        position: static !important;
+        left: auto !important;
     }
 
-    .bio-button {
-        display: none !important;
+    .nav-center {
+        flex: 1 !important; 
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .logo-name {
+        font-size: 6.5vh !important;
+        margin: 0 !important;
+        white-space: nowrap;
+        line-height: 1 !important;
     }
 
     .nav-contact-right {
-        right: 9vw;
-    }
-
-    .nav-contact-right span {
-        display: none;
+        flex: 1 !important; 
+        display: flex !important;
+        justify-content: center !important; 
+        position: static !important;
+        right: auto !important;
     }
 
     .nav-contact-right a {
-        font-size: 1rem;
+        font-size: 0.9rem !important;
+        text-decoration: none;
+        white-space: nowrap;
+        transform: translateY(50%);
     }
 
-    .logo-name { font-size: 6.5vh; }
+    .bio-button, .nav-contact-right span {
+        display: none !important;
+    }
     
     .hero {
         height: 100vh !important;
