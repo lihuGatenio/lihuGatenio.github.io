@@ -156,7 +156,7 @@ body {
 .intro-text p {
     font-family: 'Alegreya', serif;
     font-weight: 400;
-    font-size: 3rem; 
+    font-size: 2.5rem; 
     line-height: 1;
     color: var(--text-color); 
     margin: 0;
@@ -367,7 +367,6 @@ body {
     display: flex;
     justify-content: center;
     padding: 10vh 0;
-    margin-bottom: 15vh;
     background-color: var(--bg-color);
     position: relative;
     z-index: 5;
